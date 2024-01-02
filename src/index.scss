@@ -1,0 +1,11 @@
+    
+$fonts: 'Poppins', Helvertica, sans-serif;
+$primary-color: #ab99ca;
+$spacing: 0;
+   
+body {
+    font-family: $fonts;
+    background: #fff;
+   padding: 0 $spacing;
+   margin: $spacing;
+}
