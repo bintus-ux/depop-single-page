@@ -30,6 +30,24 @@ const MainContent = () => {
       buttonText: 'Sell on Depop',
     },
   ]
+
+  function handleScroll() {
+    const pageTop =
+      document.documentElement.scrollTop || document.body.scrollTop
+    const pageBottom = pageTop + window.innerHeight
+    const fadeups = document.querySelectorAll('.slide_in')
+
+    fadeups.forEach((slide_in) => {
+      if (slide_in.getBoundingClientRect().top < pageBottom) {
+        slide_in.classList.add('visible')
+      } else {
+        slide_in.classList.remove('visible')
+      }
+    })
+  }
+
+  document.addEventListener('scroll', handleScroll)
+
   return (
     <Box
       position='relative'
@@ -104,16 +122,17 @@ const MainContent = () => {
               lg: '60%',
               xl: '60%',
             }}
-            textAlign='left'
-            style={{ border: '1px solid red' }}>
-            <CardBody>
-              <Heading size='md'>{item.headerText}</Heading>
+            textAlign='left'>
+            <CardBody textAlign='left' padding='0'>
+              <Heading size='md' py='5'>
+                {item.headerText}
+              </Heading>
 
               <Text py='2'>{item.text}</Text>
             </CardBody>
 
-            <CardFooter>
-              <Button variant='solid' colorScheme='red'>
+            <CardFooter textAlign='left' padding='0' py='5'>
+              <Button variant='solid' colorScheme='red' className='slide_in'>
                 {item.buttonText}
               </Button>
             </CardFooter>

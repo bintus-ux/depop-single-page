@@ -8,6 +8,7 @@ const SubHeader = () => {
     <>
       {!isSmallScreen && (
         <Wrap
+          className='fade_down'
           mt='70px'
           position='fixed'
           px={{

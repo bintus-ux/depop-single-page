@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react'
 
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState('')
-  const [list] = useState(['HTML', 'CSS', 'Javascript'])
+  const [list] = useState(['Camos', 'Tshirts', 'Vintage', 'Sneakers'])
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
