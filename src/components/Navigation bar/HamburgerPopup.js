@@ -175,7 +175,7 @@ const HamburgerPopup = () => {
           direction='column'
           w='100%'
           mb='30px'
-          height='500px'
+          height='auto'
           justifyContent='space-between'>
           <Flex
             direction='column'
