@@ -9,10 +9,15 @@ const NavigationComponents = () => {
   return (
     <Flex
       w='auto'
-      gap='20px'
+      gap={{
+        base: '10px',
+        sm: '20px',
+        md: '20px',
+        lg: '20px',
+        xl: '20px',
+      }}
       align='center'
-      justify='space-between'
-      border='blue 2px solid'>
+      justify='space-between'>
       {!isSmallScreen && (
         <Box>
           {' '}
@@ -27,11 +32,24 @@ const NavigationComponents = () => {
         color='white'
         bg='black'
         h={{ base: '50px', md: '50px' }}
-        w='100px'
+        w={{
+          base: '70px',
+          sm: '50px',
+          md: '100px',
+          lg: '100px',
+          xl: '100px',
+        }}
         variant='solid'
-        size='xl'
         style={{ borderRadius: '5px' }}>
-        <Text fontSize='20px' fontWeight='bold'>
+        <Text
+          fontSize={{
+            base: '15px',
+            sm: '20px',
+            md: '20px',
+            lg: '20px',
+            xl: '20px',
+          }}
+          fontWeight='bold'>
           Sign up
         </Text>
       </Button>{' '}

@@ -46,16 +46,34 @@ const Footer = () => {
     'Sitemaps',
     'Cookies',
   ]
+  function handleScroll() {
+    const pageTop =
+      document.documentElement.scrollTop || document.body.scrollTop
+    const pageBottom = pageTop + window.innerHeight
+    const fadeups = document.querySelectorAll('.fade_up')
+
+    fadeups.forEach((fade_up) => {
+      if (fade_up.getBoundingClientRect().top < pageBottom) {
+        fade_up.classList.add('visible')
+      } else {
+        fade_up.classList.remove('visible')
+      }
+    })
+  }
+
+  document.addEventListener('scroll', handleScroll)
 
   return (
     <>
       {!isSmallScreen && (
         <Flex
           as='footer'
+          className='fade_up'
           role='contentinfo'
           mx='auto'
+          h='60px'
           flexWrap='wrap'
-          py={{ base: '12', md: '5' }}
+          py='auto'
           px={{
             base: '10px',
             sm: '10px',
@@ -63,7 +81,7 @@ const Footer = () => {
             lg: '30px',
             xl: '30px',
           }}
-          style={{ border: '1px solid red' }}>
+          style={{ border: '1px solid lightgray' }}>
           <Stack justify='space-between' direction='row' align='center'>
             <Wrap py='15px' align='center' width='100%' height='auto'>
               {footerItems.map((item, i) => (
@@ -95,8 +113,7 @@ const Footer = () => {
               }}
               justify='space-between'
               direction='row'
-              align='center'
-              style={{ border: '1px solid red' }}>
+              align='center'>
               <FaInstagram />
               <FaXTwitter />
               <FaFacebookF />

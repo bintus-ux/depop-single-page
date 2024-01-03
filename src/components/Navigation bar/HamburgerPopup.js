@@ -64,29 +64,30 @@ const HamburgerPopup = () => {
         />
       </Box>
       <Flex
-        style={{ border: '1px solid red' }}
         direction='column'
         align='center'
         mt={isOpen ? 4 : 0}
         mr={isOpen ? '15px' : 0}
         py={isOpen && 2}
-        px={isOpen && '15px'}
+        px={isOpen && '10px'}
         bg='white'
         rowGap='25px'
-        w={isOpen ? '80vw' : '0'}
+        w={isOpen && '80%'}
+        h='auto'
+        overflow='hidden'
         display={isOpen ? 'flex' : 'none'}
         position='fixed'
         top='-5'
         left='0'
         bottom='0'
         zIndex='999'
+        overflowY='auto'
         transition='all 0.3s'>
         <Flex
           direction='row'
           justifyContent='space-between'
           alignItems='center'
-          w='100%'
-          style={{ border: '1px solid red' }}>
+          w='100%'>
           <Logo />
           <IoClose style={{ fontSize: '40px' }} onClick={closeMenu} />
         </Flex>
@@ -119,42 +120,26 @@ const HamburgerPopup = () => {
           </Button>
         </Flex>
         <hr />
-        <Stack direction='column' rowGap={4}>
-          <Flex
-            justifyContent='space-between'
-            align='center'
-            style={{ border: '1px solid red' }}
-            w='300px'>
+        <Stack direction='column' w='100%' rowGap={4}>
+          <Flex justifyContent='space-between' align='center'>
             <Text fontFamily='monospace' fontSize='25px' fontWeight='700'>
               Menswear
             </Text>{' '}
             <IoIosArrowForward style={{ fontSize: '30px' }} />
           </Flex>
-          <Flex
-            justifyContent='space-between'
-            align='center'
-            style={{ border: '1px solid red' }}
-            w='300px'>
+          <Flex justifyContent='space-between' align='center'>
             <Text fontFamily='monospace' fontSize='25px' fontWeight='700'>
               Womenswear
             </Text>{' '}
             <IoIosArrowForward style={{ fontSize: '30px' }} />
           </Flex>
-          <Flex
-            justifyContent='space-between'
-            align='center'
-            style={{ border: '1px solid red' }}
-            w='300px'>
+          <Flex justifyContent='space-between' align='center'>
             <Text fontFamily='monospace' fontSize='25px' fontWeight='700'>
               Brands
             </Text>{' '}
             <IoIosArrowForward style={{ fontSize: '30px' }} />
           </Flex>
-          <Flex
-            justifyContent='space-between'
-            align='center'
-            style={{ border: '1px solid red' }}
-            w='300px'>
+          <Flex justifyContent='space-between' align='center'>
             <Text
               color='red'
               fontFamily='monospace'
@@ -166,7 +151,7 @@ const HamburgerPopup = () => {
           </Flex>
         </Stack>
         <hr />
-        <Box>
+        <Box w='100%'>
           <Heading as='h3' size='lg' mb='10px'>
             More From Depop
           </Heading>
@@ -180,22 +165,24 @@ const HamburgerPopup = () => {
           <Text style={{ fontSize: '20px' }}>Get The App</Text>
         </Box>
         <hr />
-        <HStack marginLeft='-180px'>
+        <Flex direction='row' justifyContent='flex-start' gap='30px' w='100%'>
           <FaInstagram style={{ fontSize: '25px' }} />
           <FaXTwitter style={{ fontSize: '25px' }} />
           <FaFacebookF style={{ fontSize: '25px' }} />
           <FaTiktok style={{ fontSize: '25px' }} />
-        </HStack>
+        </Flex>
         <Flex
           direction='column'
-          width='100%'
-          height='130px'
+          w='100%'
+          mb='30px'
+          height='500px'
           justifyContent='space-between'>
           <Flex
             direction='column'
             justifyContent='space-between'
             alignItems='flex-start'
             height='50px'
+            mb='30px'
             padding='0 10px'
             style={{ border: '1px solid black', position: 'relative' }}>
             <Text style={{ color: 'gray' }}>Select Language</Text>

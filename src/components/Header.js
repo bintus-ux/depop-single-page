@@ -8,13 +8,9 @@ import { useState } from 'react'
 import {
   Box,
   Flex,
-  Collapse,
-  Text,
   Link as ChakraLink,
   useMediaQuery,
-  HStack,
   chakra,
-  Button,
 } from '@chakra-ui/react'
 
 const Header = () => {
@@ -50,11 +46,7 @@ const Header = () => {
           <>
             {isSmallScreen ? (
               <>
-                <Flex
-                  align='center'
-                  justify='space-between'
-                  w='120px'
-                  style={{ border: '1px solid red' }}>
+                <Flex align='center' justify='space-between' w='120px'>
                   <HamburgerPopup />
                   <Logo />
                 </Flex>

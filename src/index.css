@@ -34,7 +34,12 @@
 }
 .search_container {
     margin-right: 20px;
-    padding-top: 12px;
+    padding-top: 5px;
+}
+@media screen  and (max-width: 767px) {
+    .search_container {
+       margin-right: 0px;
+    }
 }
 .circle {
     width: 16px;
@@ -90,7 +95,6 @@ hr {
   margin-bottom: 20px;
    height: 200px;
     width: 300px;
-    border: 1px solid black;
 }
 .list_items {
     height: 200px;
@@ -105,4 +109,13 @@ hr {
 }
 li {
     padding: 5px;
+}
+.fade_up {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 3s;
+}
+.fade_up.visible {
+    opacity: 1;
+    transform: translate(0, 0);
 }
