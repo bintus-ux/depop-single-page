@@ -14,8 +14,8 @@ const SubHeader = () => {
           width='100%'
           height='auto'
           justify='left'
-          fontSize='18px'
-          fontWeight='600'
+          fontSize='19px'
+          fontWeight='900'
           style={{ borderBottom: 'ridge 0.5px lightgrey' }}>
           <WrapItem style={{ marginRight: '30px' }}>Menswear</WrapItem>
           <WrapItem style={{ marginRight: '30px' }}>Womenwear</WrapItem>

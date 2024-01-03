@@ -10,7 +10,6 @@ import { FaInstagram } from 'react-icons/fa6'
 import { FaXTwitter } from 'react-icons/fa6'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa'
-import Logo from './Navigation bar/Logo'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -36,11 +35,8 @@ const Footer = () => {
   const footerItems = [
     'Blog',
     'About',
-
     'Sell on Depop',
-
     'Depop Amplified',
-
     'Jobs',
     'News',
     'Support',
@@ -97,21 +93,39 @@ const Footer = () => {
               <FaXTwitter />
               <FaFacebookF />
               <FaTiktok />
-              <Select
-                w='100px'
-                placeholder='Select option'
-                fontFamily='monospace'>
-                <option value='option1'>Option 1</option>
-                <option value='option2'>Option 2</option>
-                <option value='option3'>Option 3</option>
+              <Select w='120px' fontFamily='monospace'>
+                <option value='en' aria-label='English' selected>
+                  English
+                </option>
+                <option value='fr' aria-label='Français'>
+                  Français
+                </option>
+                <option value='de' aria-label='Deutsch'>
+                  Deutsch
+                </option>
+                <option value='it' aria-label='Italiano'>
+                  Italiano
+                </option>
               </Select>
-              <Select
-                w='100px'
-                placeholder='Select option'
-                fontFamily='monospace'>
-                <option value='option1'>Option 1</option>
-                <option value='option2'>Option 2</option>
-                <option value='option3'>Option 3</option>
+              <Select w='170px' fontFamily='monospace'>
+                <option value='au' aria-label='Australia'>
+                  Australia
+                </option>
+                <option value='de' aria-label='Germany'>
+                  Germany
+                </option>
+                <option value='fr' aria-label='France'>
+                  France
+                </option>
+                <option value='gb' aria-label='United Kingdom'>
+                  United Kingdom
+                </option>
+                <option value='it' aria-label='Italy'>
+                  Italy
+                </option>
+                <option value='us' aria-label='United States' selected>
+                  United States
+                </option>
               </Select>
             </Flex>
           </Stack>
