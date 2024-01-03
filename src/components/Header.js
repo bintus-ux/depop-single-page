@@ -27,12 +27,12 @@ const Header = () => {
         <Flex
           w={{
             base: '100%',
-            sm: 'auto',
-            md: 'auto',
+            sm: '100%',
+            md: '100%',
             lg: '100%',
             xl: '100%',
           }}
-          h={{ base: '70px', md: 'auto' }}
+          h={{ base: '70px', md: '70px' }}
           px={{
             base: '10px',
             sm: '10px',
@@ -41,9 +41,12 @@ const Header = () => {
             xl: '30px',
           }}
           mx='auto'
+          position='fixed'
           align='center'
+          zIndex='1'
           justify='space-between'
-          borderBottom='ridge 0.5px lightgrey'>
+          borderBottom='ridge 0.5px lightgrey'
+          style={{ backgroundColor: 'white' }}>
           <>
             {isSmallScreen ? (
               <>

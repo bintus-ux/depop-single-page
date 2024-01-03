@@ -56,13 +56,15 @@ const Footer = () => {
           mx='auto'
           flexWrap='wrap'
           py={{ base: '12', md: '5' }}
-          px={{ base: '12px', md: '30px' }}
+          px={{
+            base: '10px',
+            sm: '10px',
+            md: '10px',
+            lg: '30px',
+            xl: '30px',
+          }}
           style={{ border: '1px solid red' }}>
-          <Stack
-            justify='space-between'
-            direction='row'
-            align='center'
-            gap='100px'>
+          <Stack justify='space-between' direction='row' align='center'>
             <Wrap py='15px' align='center' width='100%' height='auto'>
               {footerItems.map((item, i) => (
                 <WrapItem
@@ -84,7 +86,13 @@ const Footer = () => {
               ))}
             </Wrap>
             <Flex
-              w='600px'
+              w={{
+                base: '400px',
+                sm: '400px',
+                md: '600px',
+                lg: '600px',
+                xl: '600px',
+              }}
               justify='space-between'
               direction='row'
               align='center'
@@ -93,7 +101,15 @@ const Footer = () => {
               <FaXTwitter />
               <FaFacebookF />
               <FaTiktok />
-              <Select w='120px' fontFamily='monospace'>
+              <Select
+                w={{
+                  base: '120px',
+                  sm: '120px',
+                  md: '100px',
+                  lg: '120px',
+                  xl: '120px',
+                }}
+                fontFamily='monospace'>
                 <option value='en' aria-label='English' selected>
                   English
                 </option>
@@ -107,7 +123,15 @@ const Footer = () => {
                   Italiano
                 </option>
               </Select>
-              <Select w='170px' fontFamily='monospace'>
+              <Select
+                w={{
+                  base: '120px',
+                  sm: '120px',
+                  md: '100px',
+                  lg: '120px',
+                  xl: '120px',
+                }}
+                fontFamily='monospace'>
                 <option value='au' aria-label='Australia'>
                   Australia
                 </option>

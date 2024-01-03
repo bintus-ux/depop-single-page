@@ -21,6 +21,11 @@
     background-color: #fff;
     margin: 5px 0;
 }
+@media screen  and (min-width: 768px) {
+    .search_bar {
+        width: auto;
+    }
+}
 .input_box {
     position: relative;
     display: flex;
