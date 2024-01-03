@@ -4,6 +4,7 @@ import NavigationComponents from './Navigation bar/NavigationComponents'
 import SearchBar from './Navigation bar/SearchBar'
 import SubHeader from './Navigation bar/SubHeader'
 import HamburgerPopup from './Navigation bar/HamburgerPopup'
+import { CiSearch } from 'react-icons/ci'
 import { useState } from 'react'
 import {
   Box,
@@ -57,14 +58,13 @@ const Header = () => {
               </Box>
             )}
           </>
-          {isSmallScreen ? (
-            <Box className='search_container' marginLeft='70px'>
-              <Box className='circle'></Box>
-              <Box className='line'></Box>
-            </Box>
-          ) : (
-            <SearchBar />
-          )}
+          <Box marginLeft={{ base: 'auto', md: 'auto' }}>
+            {isSmallScreen ? (
+              <CiSearch style={{ fontSize: '35px' }} />
+            ) : (
+              <SearchBar />
+            )}
+          </Box>
 
           <NavigationComponents />
         </Flex>

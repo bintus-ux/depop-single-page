@@ -43,7 +43,7 @@ const NavigationComponents = () => {
         style={{ borderRadius: '5px' }}>
         <Text
           fontSize={{
-            base: '15px',
+            base: '12px',
             sm: '20px',
             md: '20px',
             lg: '20px',
