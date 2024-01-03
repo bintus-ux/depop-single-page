@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
 
 }
 .layout {
@@ -10,4 +13,66 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
+}
+.search_bar {
+    width: 500px;
+    border-radius: 100px;
+    border: 1px solid black;
+    background-color: #fff;
+    margin: 5px 0;
+}
+.input_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1px 20px;
+}
+.search_container {
+    margin-right: 20px;
+    padding-top: 12px;
+}
+.circle {
+    width: 16px;
+    height: 16px;
+    display: block;
+    border: 3px solid #000;
+    border-radius: 100px;
+}
+.line {
+    width: 3px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #000;
+    transform: translate(19px, -5px) rotate(-45deg);
+}
+input {
+    width: 100%;
+    font-size: 25px;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+}
+.placeholder {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    color: #989898;
+}
+.box {
+    font-size: 25px;
+    margin-right: 10px;
+}
+.slider_box {
+    position: relative;
+}
+.slider {
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    opacity: 0;
+    font-size: 25px;
+    transition: 0.5s;
 }

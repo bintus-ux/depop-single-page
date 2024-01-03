@@ -1,13 +1,14 @@
 import React from 'react'
 import Logo from './Navigation bar/Logo'
 import NavigationComponents from './Navigation bar/NavigationComponents'
+import SearchBar from './Navigation bar/SearchBar'
+import SubHeader from './Navigation bar/SubHeader'
 import { useState } from 'react'
 import {
   Box,
   Flex,
   Collapse,
   Text,
-  IconButton,
   Link as ChakraLink,
   useMediaQuery,
   HStack,
@@ -49,7 +50,6 @@ const Header = () => {
     <>
       <chakra.header id='header'>
         <Flex
-          border='2px solid red'
           w={{
             base: '100%',
             sm: 'auto',
@@ -57,7 +57,14 @@ const Header = () => {
             lg: '100%',
             xl: '100%',
           }}
-          px='15px'
+          h={{ base: '70px', md: 'auto' }}
+          px={{
+            base: '10px',
+            sm: '10px',
+            md: '10px',
+            lg: '30px',
+            xl: '30px',
+          }}
           mx='auto'
           align='center'
           justify='space-between'
@@ -65,10 +72,14 @@ const Header = () => {
           <>
             {isSmallScreen ? (
               <>
-                <Flex align='center' justify='space-between'>
+                <Flex
+                  align='center'
+                  justify='space-between'
+                  w='120px'
+                  style={{ border: '1px solid red' }}>
                   <Box>
                     <i
-                      className='fa-solid fa-bars'
+                      className='fa-solid fa-bars fa-xl'
                       icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                       aria-label={isOpen ? 'Close menu' : 'Open menu'}
                       variant='ghost'
@@ -118,18 +129,24 @@ const Header = () => {
               </>
             ) : (
               <Box>
-                <Text
-                  color='red'
-                  fontSize='25px'
-                  fontFamily='inter'
-                  fontWeight='800'>
+                <Text color='red' fontSize='25px' fontWeight='800'>
                   depop
                 </Text>
               </Box>
             )}
           </>
+          {isSmallScreen ? (
+            <Box className='search_container' marginLeft='70px'>
+              <Box className='circle'></Box>
+              <Box className='line'></Box>
+            </Box>
+          ) : (
+            <SearchBar />
+          )}
+
           <NavigationComponents />
         </Flex>
+        <SubHeader />
       </chakra.header>
     </>
   )
