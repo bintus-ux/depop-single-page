@@ -17,17 +17,17 @@ const MainContent = () => {
   const mainContentItems = [
     {
       _id: 1,
-      img_src: '/site-images/img1.jpg',
+      img_src: '/site-images/idealimg5.WEBP',
       headerText: 'Find your style',
-      text: "Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Depop.",
-      buttonText: 'Shop now',
+      text: 'Founded in 2016 by Paris-born, Ivory Coast-raised creative director Sarah Diouf, Tongoro is a ready-to-wear label with a strong emphasis on African fashion and craftsmanship. All materials are sustainably sourced on the continent and each and every piece is made in Dakar, Senegal by local tailors (Senegalese tailoring is renowned for its exceptional quality). The long-term goal is to “create a new dynamic for Africa-based manufacturing, and foster the economic and social development of artisanal workers in Western Africa.”',
+      buttonText: 'Check slides',
     },
     {
       _id: 2,
-      img_src: '/site-images/img2.jpg',
+      img_src: '/site-images/idealimg4.JPG',
       headerText: 'Sell your way',
-      text: "Sell a few items or build your empire. Whatever your vibe we’ll share our pro tips to help you get there. It's simple to get started.      ",
-      buttonText: 'Sell on Depop',
+      text: 'Returning home for the hols also means that it is time to bring out our A-game in our fashion fam! And what better place to get our designer fix this Christmas and New Year than on the home continent? There is an abundance of talented designers making waves not just all over Africa but also on the international fashion scene',
+      buttonText: 'Sell on Afrotopia',
     },
   ]
 
@@ -74,10 +74,10 @@ const MainContent = () => {
         lg: 'auto',
         xl: 'auto',
       }}
-      mt={{ base: '120px', md: '200px' }}>
+      mt={{ base: '100px', md: '150px' }}>
       <Flex direction='row' justifyContent='space-between'>
         <Heading as='h3' size='md'>
-          The Depop Edit
+          The Afrotopia Edit
         </Heading>
         <Text style={{ color: 'rgb(114, 123, 179)' }}>See more</Text>
       </Flex>
@@ -95,7 +95,7 @@ const MainContent = () => {
                 ]
               : ['column', 'column', 'row', 'row', 'row']
           }
-          mt='100px'
+          mt='50px'
           mb='20px'
           justifyContent='space-between'
           alignItems='center'

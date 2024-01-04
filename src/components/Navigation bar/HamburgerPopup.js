@@ -32,7 +32,7 @@ const HamburgerPopup = () => {
     'Blog',
     'About',
     'Sell on Depop',
-    'Depop Amplified',
+    'Afro Amplified',
     'Jobs',
     'News',
     'Support',
@@ -122,38 +122,38 @@ const HamburgerPopup = () => {
         <hr />
         <Stack direction='column' w='100%' rowGap={4}>
           <Flex justifyContent='space-between' align='center'>
-            <Text fontFamily='monospace' fontSize='25px' fontWeight='700'>
+            <Text fontFamily='monospace' fontSize='22px' fontWeight='700'>
               Menswear
             </Text>{' '}
-            <IoIosArrowForward style={{ fontSize: '30px' }} />
+            <IoIosArrowForward style={{ fontSize: '22px' }} />
           </Flex>
           <Flex justifyContent='space-between' align='center'>
-            <Text fontFamily='monospace' fontSize='25px' fontWeight='700'>
+            <Text fontFamily='monospace' fontSize='22px' fontWeight='700'>
               Womenswear
             </Text>{' '}
-            <IoIosArrowForward style={{ fontSize: '30px' }} />
+            <IoIosArrowForward style={{ fontSize: '22px' }} />
           </Flex>
           <Flex justifyContent='space-between' align='center'>
-            <Text fontFamily='monospace' fontSize='25px' fontWeight='700'>
+            <Text fontFamily='monospace' fontSize='22px' fontWeight='700'>
               Brands
             </Text>{' '}
-            <IoIosArrowForward style={{ fontSize: '30px' }} />
+            <IoIosArrowForward style={{ fontSize: '22px' }} />
           </Flex>
           <Flex justifyContent='space-between' align='center'>
             <Text
               color='red'
               fontFamily='monospace'
-              fontSize='25px'
+              fontSize='22px'
               fontWeight='700'>
               New Year Sale
             </Text>{' '}
-            <IoIosArrowForward style={{ fontSize: '30px' }} />
+            <IoIosArrowForward style={{ fontSize: '22px' }} />
           </Flex>
         </Stack>
         <hr />
         <Box w='100%'>
           <Heading as='h3' size='lg' mb='10px'>
-            More From Depop
+            More From Afrotopia
           </Heading>
           <Center className='container'>
             <Box className='list_items'>

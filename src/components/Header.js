@@ -58,13 +58,15 @@ const Header = () => {
               </Box>
             )}
           </>
-          <Box marginLeft={{ base: 'auto', md: 'auto' }}>
-            {isSmallScreen ? (
+          {isSmallScreen ? (
+            <Box marginLeft={{ base: 'auto', md: 'auto' }}>
               <CiSearch style={{ fontSize: '35px' }} />
-            ) : (
+            </Box>
+          ) : (
+            <Box>
               <SearchBar />
-            )}
-          </Box>
+            </Box>
+          )}
 
           <NavigationComponents />
         </Flex>

@@ -35,8 +35,8 @@ const Footer = () => {
   const footerItems = [
     'Blog',
     'About',
-    'Sell on Depop',
-    'Depop Amplified',
+    'Sell on Afrotopia',
+    'Afro Amplified',
     'Jobs',
     'News',
     'Support',
