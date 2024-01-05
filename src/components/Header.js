@@ -15,7 +15,6 @@ import {
 } from '@chakra-ui/react'
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
   const [isSmallScreen] = useMediaQuery('(max-width: 767px)')
 
   return (
@@ -47,7 +46,7 @@ const Header = () => {
           <>
             {isSmallScreen ? (
               <>
-                <Flex align='center' justify='space-between' w='120px'>
+                <Flex align='center' justify='space-between' w='150px'>
                   <HamburgerPopup />
                   <Logo />
                 </Flex>
