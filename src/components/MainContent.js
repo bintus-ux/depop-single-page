@@ -17,9 +17,9 @@ const MainContent = () => {
   const mainContentItems = [
     {
       _id: 1,
-      img_src: '/site-images/idealimg5.WEBP',
+      img_src: '/site-images/idealimg1.PNG',
       headerText: 'Find your style',
-      text: 'Founded in 2016 by Paris-born, Ivory Coast-raised creative director Sarah Diouf, Tongoro is a ready-to-wear label with a strong emphasis on African fashion and craftsmanship. All materials are sustainably sourced on the continent and each and every piece is made in Dakar, Senegal by local tailors (Senegalese tailoring is renowned for its exceptional quality). The long-term goal is to “create a new dynamic for Africa-based manufacturing, and foster the economic and social development of artisanal workers in Western Africa.”',
+      text: 'One of the most prominent names among African fashion designers, the label counts Beyoncé, Naomi Campbell, Iman and Alicia Keys as fans, who no doubt favour it not just for the billowing silhouettes, bold patterns and graphic prints that ripple through the collections (SS22 sees voluminous shapes and black-and-white geometric motifs blazoned across flowing jumpsuits, maxi dresses and playsuits) – but also for the fact that the brand is based around empowering women.',
       buttonText: 'Check slides',
     },
     {
@@ -27,6 +27,13 @@ const MainContent = () => {
       img_src: '/site-images/idealimg4.JPG',
       headerText: 'Sell your way',
       text: 'Returning home for the hols also means that it is time to bring out our A-game in our fashion fam! And what better place to get our designer fix this Christmas and New Year than on the home continent? There is an abundance of talented designers making waves not just all over Africa but also on the international fashion scene',
+      buttonText: 'Sell on Afrotopia',
+    },
+    {
+      _id: 3,
+      img_src: '/site-images/idealimg5.WEBP',
+      headerText: 'Sell your way',
+      text: 'Founded in 2016 by Paris-born, Ivory Coast-raised creative director Sarah Diouf, Tongoro is a ready-to-wear label with a strong emphasis on African fashion and craftsmanship. All materials are sustainably sourced on the continent and each and every piece is made in Dakar, Senegal by local tailors (Senegalese tailoring is renowned for its exceptional quality). The long-term goal is to “create a new dynamic for Africa-based manufacturing, and foster the economic and social development of artisanal workers in Western Africa.”',
       buttonText: 'Sell on Afrotopia',
     },
   ]
@@ -128,7 +135,14 @@ const MainContent = () => {
                 {item.headerText}
               </Heading>
 
-              <Text py='2'>{item.text}</Text>
+              <Text
+                py='2'
+                fontWeight='normal'
+                fontSize='0.975rem'
+                color='rgb(38, 38, 38)'
+                lineHeight='1.5'>
+                {item.text}
+              </Text>
             </CardBody>
 
             <CardFooter textAlign='left' padding='0' py='5'>

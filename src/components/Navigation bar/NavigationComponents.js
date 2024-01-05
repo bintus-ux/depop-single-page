@@ -43,13 +43,14 @@ const NavigationComponents = () => {
         style={{ borderRadius: '5px' }}>
         <Text
           fontSize={{
-            base: '12px',
+            base: '14px',
             sm: '20px',
             md: '20px',
             lg: '20px',
             xl: '20px',
           }}
-          fontWeight='bold'>
+          fontFamily='inter'
+          fontWeight='900'>
           Sign up
         </Text>
       </Button>{' '}
