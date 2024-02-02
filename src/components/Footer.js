@@ -71,7 +71,7 @@ const Footer = () => {
           className='fade_up'
           role='contentinfo'
           mx='auto'
-          h='60px'
+          h='auto'
           flexWrap='wrap'
           py='auto'
           px={{
@@ -83,7 +83,17 @@ const Footer = () => {
           }}
           style={{ border: '1px solid lightgray' }}>
           <Stack justify='space-between' direction='row' align='center'>
-            <Wrap py='15px' align='center' width='100%' height='auto'>
+            <Wrap
+              py='15px'
+              align='center'
+              width={{
+                base: '400px',
+                sm: '400px',
+                md: '300px',
+                lg: 'auto',
+                xl: '100%',
+              }}
+              height='auto'>
               {footerItems.map((item, i) => (
                 <WrapItem
                   key={i}
@@ -107,9 +117,9 @@ const Footer = () => {
               w={{
                 base: '400px',
                 sm: '400px',
-                md: '600px',
-                lg: '600px',
-                xl: '600px',
+                md: '300px',
+                lg: '500px',
+                xl: '500px',
               }}
               justify='space-between'
               direction='row'
@@ -123,7 +133,7 @@ const Footer = () => {
                   base: '120px',
                   sm: '120px',
                   md: '100px',
-                  lg: '120px',
+                  lg: '100px',
                   xl: '120px',
                 }}
                 fontFamily='monospace'>
@@ -145,7 +155,7 @@ const Footer = () => {
                   base: '120px',
                   sm: '120px',
                   md: '100px',
-                  lg: '120px',
+                  lg: '100px',
                   xl: '120px',
                 }}
                 fontFamily='monospace'>

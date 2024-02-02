@@ -32,13 +32,7 @@ const NavigationComponents = () => {
         color='white'
         bg='black'
         h={{ base: '50px', md: '50px' }}
-        w={{
-          base: '70px',
-          sm: '50px',
-          md: '100px',
-          lg: '100px',
-          xl: '100px',
-        }}
+        w='auto'
         variant='solid'
         style={{ borderRadius: '5px' }}>
         <Text
@@ -59,7 +53,8 @@ const NavigationComponents = () => {
           color='black'
           border='none'
           bg='white'
-          h='50px'
+          h={{ base: '50px', md: '50px' }}
+          w='auto'
           variant='solid'
           size='md'>
           <Text fontSize='20px' fontWeight='bold'>

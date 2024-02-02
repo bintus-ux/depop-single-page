@@ -74,13 +74,7 @@ const MainContent = () => {
         lg: '30px',
         xl: '30px',
       }}
-      h={{
-        base: 'auto',
-        sm: 'auto',
-        md: 'auto',
-        lg: 'auto',
-        xl: 'auto',
-      }}
+      h='auto'
       mt={{ base: '100px', md: '150px' }}>
       <Flex direction='row' justifyContent='space-between'>
         <Heading as='h3' size='md'>
@@ -89,8 +83,9 @@ const MainContent = () => {
         <Text style={{ color: 'rgb(114, 123, 179)' }}>See more</Text>
       </Flex>
       {mainContentItems.map((item, i) => (
-        <Card
+        <Flex
           key={i}
+          style={{ border: '2px solid red' }}
           direction={
             item._id % 2 === 0
               ? [
@@ -104,54 +99,53 @@ const MainContent = () => {
           }
           mt='50px'
           mb='20px'
+          mx='auto'
           justifyContent='space-between'
           alignItems='center'
           overflow='hidden'
           variant='outline'>
-          <Image
-            objectFit='cover'
-            maxW={{
-              base: '100%',
-              sm: '100%',
-              md: '100%',
-              lg: '400px',
-              xl: '400px',
-            }}
-            src={item.img_src}
-            alt='pose'
-          />
-
-          <Stack
+          <Image height='500px' width='400px' src={item.img_src} alt='pose' />
+          <Flex
+            direction='column'
+            justifyContent='center'
+            alignItems='flex-start'
+            px='auto'
             w={{
-              base: '100%',
-              sm: '100%',
-              md: '100%',
-              lg: '60%',
-              xl: '60%',
-            }}
-            textAlign='left'>
-            <CardBody textAlign='left' padding='0'>
-              <Heading size='md' py='5'>
-                {item.headerText}
-              </Heading>
+              base: 'auto',
+              sm: '300px',
+              md: '300px',
+              lg: '500px',
+              xl: '600px',
+            }}>
+            <Heading size='md' py='5'>
+              {item.headerText}
+            </Heading>
 
-              <Text
-                py='2'
-                fontWeight='normal'
-                fontSize='0.975rem'
-                color='rgb(38, 38, 38)'
-                lineHeight='1.5'>
-                {item.text}
-              </Text>
-            </CardBody>
+            <Text
+              py='2'
+              mb={{
+                base: '30px',
+                sm: '30px',
+                md: '10px',
+                lg: '30px',
+                xl: '70px',
+              }}
+              fontWeight='normal'
+              fontSize='0.975rem'
+              color='rgb(38, 38, 38)'
+              lineHeight='1.5'>
+              {item.text}
+            </Text>
 
-            <CardFooter textAlign='left' padding='0' py='5'>
-              <Button variant='solid' colorScheme='red' className='slide_in'>
-                {item.buttonText}
-              </Button>
-            </CardFooter>
-          </Stack>
-        </Card>
+            <Button
+              variant='solid'
+              w='200px'
+              colorScheme='red'
+              className='slide_in'>
+              {item.buttonText}
+            </Button>
+          </Flex>
+        </Flex>
       ))}
     </Box>
   )
