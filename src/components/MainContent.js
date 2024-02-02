@@ -85,7 +85,6 @@ const MainContent = () => {
       {mainContentItems.map((item, i) => (
         <Flex
           key={i}
-          style={{ border: '2px solid red' }}
           direction={
             item._id % 2 === 0
               ? [
